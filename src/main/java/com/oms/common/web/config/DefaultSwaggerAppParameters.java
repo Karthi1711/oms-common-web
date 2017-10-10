@@ -18,11 +18,11 @@ public class DefaultSwaggerAppParameters implements SwaggerAppParameters {
     public List<Parameter> globalOperationParameters() {
         return Collections.singletonList(new ParameterBuilder()
                 .name("Authorization")
-                .description("Authorization token")
+                .description("Authorization JWT token")
                 .modelRef(new ModelRef("string"))
                 .parameterType("header")
                 .defaultValue("Bearer X")
-                .required(false)
+                .required(true)
                 .build());
     }
 }
